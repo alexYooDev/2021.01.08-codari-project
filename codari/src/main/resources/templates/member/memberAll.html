@@ -8,47 +8,14 @@
 <head>
 <title>코다리</title>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="/assets/css/main.css" />
 <link rel="shortcut icon" href="../img/favicon.ico" />
 <link rel="icon" href="../img/favicon.ico" />
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<style>
-	@import url("/css/fackfont.css");
-	ul.pagination li:last-child {
-	padding-left: 0 !important;
-	}
-	ul.pagination li:first-child {
-	padding-right: 0 !important;
-	}
-	ul.pagination {
-	text-align: center;
-	}
-	.paging {
-	text-decoration: none;
-	margin: 2px;
-	border-bottom: none;
-	font-size: 15px;
-	}
-	.paging:hover {
-	background-color: lightpink;
-	}
-</style>
-<script>
-       	 			$(function(){
-       		 		$(".paging").click(function(){
-       				$.ajax({
-       				url : "memberAll2.do",
-       				data:{"pageNum": $(this).text()},
-       				success:function(responseText){
-       					$("#here").html(responseText);
-       				}
-       			});
-       			 
-       		 });
-       		  
-       	  });
-</script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"></script>
 </head>
 <body class="is-preload">
 
@@ -62,23 +29,27 @@
 				<!-- Header -->
 				<header id="header">
 					<a th:href="@{/index}" class="logo"><strong>코</strong>로나 정보, <strong>다</strong><strong>이</strong>곳</a>
-					<ul th:if ="${session.userLoginInfo != null}" class="icons">
-						<li><span th:text="${session.userLoginInfo.user_nickname}"></span>님, 환영합니다.&nbsp;&nbsp;<a th:href = "@{/member/logoutProcess}" class="button small">로그아웃</a></li>
+					<ul th:if="${session.userLoginInfo != null}" class="icons">
+						<li><span th:text="${session.userLoginInfo.user_nickname}"></span>님,
+							환영합니다.&nbsp;&nbsp;<a th:href="@{/member/logoutProcess}"
+							class="button small">로그아웃</a></li>
 					</ul>
 
 				</header>
 
 				<!-- Content -->
-				<section th:if="${session.userLoginInfo!=null && session.userLoginInfo.user_role=='admin'}">
+				<section
+					th:if="${session.userLoginInfo!=null && session.userLoginInfo.user_role=='admin'}">
 					<!-- admin일 때만 -->
 					<header class="main">
 						<h1>유저목록</h1>
-					<div class="write_btn">
-   								<a class="button" onclick="location.href='/member/memberInsert.do'">사용자 추가</a>
-								</div>
+						<div class="write_btn">
+							<a class="button"
+								onclick="location.href='/member/memberInsert.do'">사용자 추가</a>
+						</div>
 					</header>
-					
-					
+
+
 					<div id="here">
 						<table border="1">
 							<tr>
@@ -88,20 +59,26 @@
 								<td>권한</td>
 								<td></td>
 							</tr>
-							<tr th:each="member : ${userlist}">
-								<td th:text="${member.user_id}"></td>
-								<td><a th:href="@{'memberDetail.do?userid='+${member.user_id}}"  th:text="${member.user_email}"></a></td>
+							<tr th:each="user : ${userlist}">
+								<td th:text="${user.user_id}"></td>
+								<td><a
+									th:href="@{'memberDetail.do?userid='+${user.user_id}}"
+									th:text="${user.user_email}"></a></td>
 								<td th:text="${member.user_nickname}"></td>
 								<td th:text="${member.user_role}"></td>
-								<td id="delete"><a class="button" th:href="@{'/member/memberDelete2.do?userid='+${member.user_id}}">강제탈퇴</a></td>
+								<td id="delete"><a class="button"
+									th:href="@{'/member/memberDelete2.do?userid='+${user.user_id}}">강제탈퇴</a></td>
 							</tr>
 						</table>
-						
+
 						<ul class="pagination">
-        						 <li class="paging" th:each="pageNum, numStat : ${#numbers.sequence( 1,pageCount)}" >
-       	 						 <a class="paging" id="su${numStat.count}" th:text="${numStat.count}">[[${numStat.count}]]</a>
-       	 						 </li> 
-    					</ul><br>
+							<li class="paging"
+								th:each="pageNum, numStat : ${#numbers.sequence( 1,pageCount)}">
+								<a class="paging" id="su${numStat.count}"
+								th:text="${numStat.count}">[[${numStat.count}]]</a>
+							</li>
+						</ul>
+						<br>
 					</div>
 				</section>
 
@@ -124,16 +101,19 @@
 								<li><a href="/fact/factCheck">Fact Check</a></li>
 								<li><a href="/board/boardAll.do">정보 공유</a></li>
 								<li><a href="/covid/covidHospitalHome.do">실시간 병원 정보</a></li>
-							</ul>
-						</li>
-						<li th:if="${session.userLoginInfo != null}"><a th:href="@{/member/myPage.do}">마이페이지</a></li>
-						<li th:if="${session.userLoginInfo == null}"><a th:href="@{/member/login}">로그인 페이지</a></li>
-						<li th:if="${session.userLoginInfo == null}"><a th:href="@{/member/register}">회원 가입</a></li>
-						<li th:if="${session.userLoginInfo != null && session.userLoginInfo.user_role == 'admin'}"><span class="opener">관리자 페이지</span>
+							</ul></li>
+						<li th:if="${session.userLoginInfo != null}"><a
+							th:href="@{/member/myPage.do}">마이페이지</a></li>
+						<li th:if="${session.userLoginInfo == null}"><a
+							th:href="@{/member/login}">로그인 페이지</a></li>
+						<li th:if="${session.userLoginInfo == null}"><a
+							th:href="@{/member/register}">회원 가입</a></li>
+						<li
+							th:if="${session.userLoginInfo != null && session.userLoginInfo.user_role == 'admin'}"><span
+							class="opener">관리자 페이지</span>
 							<ul>
 								<li><a href="/member/memberAll.do">유저 목록</a></li>
-							</ul>
-						</li>
+							</ul></li>
 					</ul>
 				</nav>
 
@@ -147,7 +127,9 @@
 					<ul class="contact">
 						<li class="icon solid fa-envelope"><a href="#">codari@gmail.com</a></li>
 						<li class="icon solid fa-phone">(02) 123-4567</li>
-						<li class="icon solid fa-home">서울시 성북구 한성대학교 #02876<br />Korea, TN 02-760-5800</li>
+						<li class="icon solid fa-home">서울시 성북구 한성대학교 #02876<br />Korea,
+							TN 02-760-5800
+						</li>
 					</ul>
 				</section>
 
@@ -157,8 +139,10 @@
 						&copy; 2020 -
 						<script>
 							document.write(new Date().getFullYear());
-						</script> 
-						All rights reserved. <br>Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.
+						</script>
+						All rights reserved. <br>Demo Images: <a
+							href="https://unsplash.com">Unsplash</a>. Design: <a
+							href="https://html5up.net">HTML5 UP</a>.
 					</p>
 				</footer>
 			</div>
@@ -172,6 +156,7 @@
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/pagination.js"></script>
 
 </body>
 </html>

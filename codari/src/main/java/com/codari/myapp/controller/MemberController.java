@@ -29,7 +29,7 @@ public class MemberController {
 		model.addAttribute("pageCount", 10);
 		return "/member/memberAll";
 	}
-	@RequestMapping(value = "/member/memberAll2.do")
+	@RequestMapping(value = "/member/memberAll.doN")
 	public String boardAllPaging(Model model, int pageNum) {
 		model.addAttribute("userlist", service.selectAll(pageNum));
 		//DB가서 건수를 알아오기 

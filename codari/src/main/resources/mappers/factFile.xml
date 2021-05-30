@@ -4,21 +4,21 @@
 
 	<!-- 특정 게시글 조회 -->
 	<select id="selectByFactId" resultType="com.codari.myapp.vo.FactFileVO" parameterType="int">
-		SELECT * from fact_image where fact_id = #{aa} ORDER BY 1
+		SELECT * from fact_file where fact_id = #{aa} ORDER BY 1
 	</select>
 	
 	<!-- 특정 글 당 파일 조회 -->
 	<select id="selectById" resultType="com.codari.myapp.vo.FactFileVO" parameterType="int">
-		SELECT * from fact_image where file_id = #{aa} ORDER BY 1
+		SELECT * from fact_file where file_id = #{aa} ORDER BY 1
 	</select>
 	
 	<insert id="insert" parameterType="com.codari.myapp.vo.FactFileVO">
-		insert into fact_image(file_name, fact_id) 
+		insert into fact_file(file_name, fact_id) 
 		values(#{file_name}, #{fact_id})
 	</insert>
 	
 	<delete id="delete" parameterType="int">
-		delete from fact_image
+		delete from fact_file
 		where fact_id = #{fact_id}
     </delete>
 </mapper>
