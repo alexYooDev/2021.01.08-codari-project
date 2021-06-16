@@ -6,7 +6,7 @@ $(function(){
 
 function getReplyList(){
     $.ajax({
-        type: "GET", //get방식으로 자료를 전달한다
+        type: "GET", 
         url: "/board/replyList.do", 
         data: {"bid": $("#board_id").val()},
         success: function(data){ 

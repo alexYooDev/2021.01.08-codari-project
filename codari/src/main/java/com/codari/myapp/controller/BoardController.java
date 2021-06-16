@@ -36,7 +36,6 @@ public class BoardController {
 		@RequestMapping(value = "/board/boardAll.doN")
 		public String boardAllPaging(Model model, int pageNum) {
 			model.addAttribute("boardlist", service.selectAll(pageNum));
-			//DB가서 건수를 알아오기 
 			model.addAttribute("pageCount", 10);
 			return "board/boardAll_page";
 		}

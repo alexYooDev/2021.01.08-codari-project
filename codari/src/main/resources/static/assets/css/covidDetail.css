@@ -1,0 +1,32 @@
+@import url("/css/fackfont.css");
+#head{
+ 		font-weight: bold;
+ 		background-color: pink;
+ 		color: windowtext;
+ }
+ #row1 {
+ 		color: black;
+ }
+ #row2 {
+ 		color: #f56a6a;
+ 		font-weight: bold;
+ }
+table{ 
+	vertical-align: middle;
+	text-align: center;
+		margin: auto;
+}
+.button{
+	float: right;
+}
+
+#titl{
+	text-align: center;
+	
+}
+
+#text { width: 80%;
+		margin: auto;
+		margin-top: 5em;
+		margin-bottom: 5em;
+	}

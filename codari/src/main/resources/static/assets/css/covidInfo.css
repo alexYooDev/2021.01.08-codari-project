@@ -1,0 +1,16 @@
+#head{
+ 		font-weight: bold;
+ 		background-color: pink;
+ 		color: windowtext;
+ }
+ #row1 {
+ 		color: black;
+ }
+ #row2 {
+ 		color: #f56a6a;
+ 		font-weight: bold;
+ }
+ table{
+ 		text-align: center;
+ 		vertical-align: middle;
+ }
