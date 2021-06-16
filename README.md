@@ -2,10 +2,11 @@
 K-move Java Enterprise Developer Course Team project
 
 This project aims to provide: 
- A community for those who wishes to share information about Korea's COVID-19 situation,
- Number of cases of death, tested positive, 
- Contact & location of designated COVID hospitals and heath care centers 
- Fact Check page for correct misconception about COVID-19
+
+ - A community for those who wishes to share information about Korea's COVID-19 situation,
+ - Number of cases of death, tested positive, 
+ - Contact & location of designated COVID hospitals and heath care centers 
+ - Fact Check page for correct misconception about COVID-19
  
 Technologies used to develop this project comprises:
   - HTML(thymeleaf),CSS,Javascript
