@@ -9,8 +9,8 @@ Developed by:
 
 This project aims to provide: 
 
- - A community for those who wishes to share information about Korea's COVID-19 situation,
- - Number of cases of death, tested positive, 
+ - A community for those who wishes to share information about Korea's COVID-19 situation
+ - Number of cases of death, tested positive 
  - Contact & location of designated COVID hospitals and heath care centers 
  - Fact Check page for correct misconception about COVID-19
  
