@@ -1,6 +1,12 @@
 # 2021.01.08-codari-project
 K-move Java Enterprise Developer Course Team project
 
+Developed by:
+
+ - Hwanik Alexander Yoo (as fron/back-end dev)
+ - Jinsun Kim (as front/back-end dev)
+ - Myeonggi Shim (as front/back-end dev)
+
 This project aims to provide: 
 
  - A community for those who wishes to share information about Korea's COVID-19 situation,
@@ -9,6 +15,7 @@ This project aims to provide:
  - Fact Check page for correct misconception about COVID-19
  
 Technologies used to develop this project comprises:
+
   - HTML(thymeleaf),CSS,Javascript
   - JAVA
   - MariaDB
