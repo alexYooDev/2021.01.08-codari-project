@@ -25,12 +25,11 @@
 		</body>
 		<script>
 		function postAddReply(){
-		//	 alert($("#myfrm").serialize());
 			$.ajax({
 				type: "POST",
 				url: "/board/addReply.do",
-				data: $("#myfrm").serialize(),	//입력된 데이터를 가져간다.
-				success: function(data){  //뿌린다
+				data: $("#myfrm").serialize(),	
+				success: function(data){  
 					$(`#replyList`).html(data);
 					$('#content').val('');
 					$('#content').focus();
