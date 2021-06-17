@@ -17,6 +17,7 @@ This project aims to provide:
 Technologies used to develop this project comprises:
 
   - HTML(thymeleaf),CSS,Javascript
+  - Jquery
   - JAVA
   - MariaDB
   - MySQL
