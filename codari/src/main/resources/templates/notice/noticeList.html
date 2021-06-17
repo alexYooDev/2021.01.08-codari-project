@@ -13,43 +13,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="/assets/css/main.css" />
-<style type="text/css">
-@import url("/css/fackfont.css");
-/*페이지네이션 css*/
-ul.pagination li:last-child {
-	padding-left: 0 !important;
-}
-ul.pagination li:first-child {
-	padding-right: 0 !important;
-}
-ul.pagination {
-	text-align: center;
-}
-.paging {
-	text-decoration: none;
-	margin: 2px;
-	border-bottom: none;
-	font-size: 15px;
-}
-.paging:hover {
-	background-color: lightpink;
-}
-	/*여기서부터는 게시판 리스트css*/
-.notice_id{
-	text-align:center;
-	width:160px;
-}
-.noticeIndividual{
-	text-align:center;
-}
-.notice_title{
-	width:400px;
-}
-.notice_view,.created_date,.user_nickname{
-	text-align:center;
-	width:100px;
-}
-</style>
+<link rel="stylesheet" href="/assets/css/pagination.css" />
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <body class="is-preload">
@@ -100,21 +64,6 @@ ul.pagination {
        	 	<a class="paging" id="su${numStat.count}" th:text="${numStat.count}">[[${numStat.count}]]</a>
        	 </li> 
     </ul> 
-       	 <script>
-       	 $(function(){
-       		 $(".paging").click(function(){
-       			$.ajax({
-       				url : "noticeList2.do",
-       				data:{"pageNum": $(this).text()},
-       				success:function(responseText){
-       					$("#here").html(responseText);
-       				}
-       			});
-       			 
-       		 });
-       		  
-       	  });
-       	 </script>
        	 </th:each>
        	 </div>
    <button onclick="location.href='/notice/noticeInsert.do'" th:if="${session.userLoginInfo!=null && session.userLoginInfo.user_role=='admin'}">글작성</button>
@@ -188,6 +137,7 @@ ul.pagination {
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/pagination.js"></script>
 
 </body>
 </html>

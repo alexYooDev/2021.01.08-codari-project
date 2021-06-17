@@ -25,52 +25,6 @@
 </style>
 <script src="/js/jQuery/jquery-3.5.1.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.js" integrity="sha512-9fASXXoC6x4BKdqe6IcEYZnt4KPMiQx5YJIsiWevf2QpSXfPcXMj4MTzIbwQuKJRysBlRh1LGHIaQm/415WyEA==" crossorigin="anonymous"></script>
-<script type="text/javascript">
-$(function() {
-	var fonts = ['맑은 고딕', '돋움', '궁서', '굴림', '굴림체', '궁서체', '나눔 고딕', '바탕', '바탕체', '새굴림', 'HY견고딕', 'HY견명조', 'HY궁서B', 'HY그래픽M', 'HY목각파임B', 'HY신명조', 'HY얕은샘물M', 'HY엽서L', 'HY엽서M', 'HY중고딕', 'HY헤드라인M', '휴먼매직체', '휴먼모음T', '휴먼아미체', '휴먼둥근헤드라인', '휴먼편지체', '휴먼옛체'];
-	console.log("페이지 불러왔습니다");
-	$('#summernote').summernote({
-		height: 300,                 // set editor height
-		minHeight		:	null,             // set minimum height of editor
-		maxHeight		:	null,             // set maximum height of editor
-		focus			:	true,                 // set focus to editable area after initializing summernote
-		fontNames		:	fonts.sort(),
-		codemirror		:	{
-    		theme			:	'pastel-on-dark',
-    		lineNumbers		:	true,
-    		tabSize			:	"8"
-							},
-		toolbar: [
-			['style', ['style']], 
-			['font', ['bold', 'underline', 'clear']], 
-			['fontsize', ['fontsize']], 
-			['fontname', ['fontname']], 
-			['color', ['color']], 
-			['para', ['ul', 'ol', 'paragraph']],
-			['table', ['table']],
-			['insert', ['link', 'picture', 'video']],
-			['view', ['fullscreen', 'codeview', 'help']]
-		]
-	});
-/* 	$('.button').on('click', function() {
-		$.ajax({
-			url : "/fact/fact.do?",
-			type : "POST",
-			success : function(data) {
-				alert("가져왔습니다");
-			},
-			error : function() {
-				alert("실패하였습니다.");
-			}
-		});
-	}); */
-});
-
-/* window.onload = call;
-function call() {
-	console.log("페이지 불러왔습니다");
-} */
-</script>
 </head>
 <body class="is-preload">
 
@@ -216,6 +170,7 @@ function call() {
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/summerNoteEditor.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 

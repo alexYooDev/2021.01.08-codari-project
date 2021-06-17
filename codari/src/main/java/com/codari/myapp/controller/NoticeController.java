@@ -36,7 +36,7 @@ public class NoticeController {
 		return "notice/noticeList";
 	}
 	
-	@RequestMapping(value = "/notice/noticeList2.do")
+	@RequestMapping(value = "/notice/noticeList.doN")
 	public String noticelistPaging(Model model, int pageNum) {
 		model.addAttribute("noticelist", noticeService.selectAll(pageNum));
 		model.addAttribute("pageCount", 10);
@@ -85,8 +85,7 @@ public class NoticeController {
 			Integer memId = notice.getUser_id();
 			MemberVO member = memberService.selectById(memId);
 			String getRole = member.getUser_role();
-			log.info(getRole);
-			if (!getRole.equals("") && getRole.equals("admin")) {
+			if (!getRole.equals("") || getRole.equals("admin")) {
 				int ret = noticeService.delete(notice_id);
 				return ret>0 ? "/notice/noticeList.do" : "/";
 			}

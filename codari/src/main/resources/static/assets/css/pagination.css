@@ -1,0 +1,34 @@
+@import url("/css/fackfont.css");
+ul.pagination li:last-child {
+	padding-left: 0 !important;
+}
+ul.pagination li:first-child {
+	padding-right: 0 !important;
+}
+ul.pagination {
+	text-align: center;
+}
+.paging {
+	text-decoration: none;
+	margin: 2px;
+	border-bottom: none;
+	font-size: 15px;
+}
+.paging:hover {
+	background-color: lightpink;
+}
+	/*여기서부터는 게시판 리스트css*/
+.notice_id{
+	text-align:center;
+	width:160px;
+}
+.noticeIndividual{
+	text-align:center;
+}
+.notice_title{
+	width:400px;
+}
+.notice_view,.created_date,.user_nickname{
+	text-align:center;
+	width:100px;
+}
