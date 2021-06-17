@@ -25,4 +25,4 @@ Technologies used to develop this project comprises:
   - Mybatis
   - Spring Boot
   
-  latest update date: as of June 17th 2021
+  latest update date: as of June 18th 2021
