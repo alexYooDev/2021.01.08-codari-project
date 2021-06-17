@@ -20,6 +20,7 @@ Technologies used to develop this project comprises:
   - JAVA
   - MariaDB
   - MySQL
+  - Maven
   - Apache Tomcat Server
   - Mybatis
   - Spring Boot
