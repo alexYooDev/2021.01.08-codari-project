@@ -3,7 +3,7 @@ K-move Java Enterprise Developer Course Team project
 
 Developed by:
 
- - Hwanik Alexander Yoo (as front/back-end dev)
+ - Hwanik Yoo (as front/back-end dev)
  - Jinsun Kim (as front/back-end dev)
  - Myeonggi Shim (as front/back-end dev)
 
