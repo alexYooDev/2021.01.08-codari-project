@@ -1,3 +1,4 @@
+![main_page](https://user-images.githubusercontent.com/70088347/122657742-44d9db00-d1a1-11eb-97ec-27d89cd44f34.png)
 # 2021.01.08-codari-project
 K-move Java Enterprise Developer Course Team project
 
