@@ -30,7 +30,8 @@ Demonstration:
 ![main_page](https://user-images.githubusercontent.com/70088347/122657742-44d9db00-d1a1-11eb-97ec-27d89cd44f34.png)
 # Daily Updated Korea COVID-19 Status Tracker
 ![logged_in](https://user-images.githubusercontent.com/70088347/122657775-7783d380-d1a1-11eb-9f22-f6dd9bf70171.png)
-# Detailed COVID-19 Status By Provinces
+# Detailed COVID-19 Status By Provinces 
+- Visible when clicked 'provincial status' button below daily tracker
 ![corona_detail_info](https://user-images.githubusercontent.com/70088347/122657832-de08f180-d1a1-11eb-9a0d-e1896ff28c9d.png)
 # COVID-19 Keyword Cloud from NAVER Portal
 ![keywords_uploaded](https://user-images.githubusercontent.com/70088347/122657802-aef28000-d1a1-11eb-9b66-413d9df3fb2a.png)
