@@ -38,8 +38,9 @@ Demonstration:
 # Sign-up page
 ![sign_up_page](https://user-images.githubusercontent.com/70088347/122657996-502e0600-d1a3-11eb-8e59-ec1e4f83b6c2.png)
 - accessible either through sign-up menu in side bar or log-in page
-- id input must comply with email format, user has to conduct duplicates check by clicking on 'check duplicates'
-- for password as well, user has to conduct duplicates check by clicking on 'check duplicates'
+- ID input must comply with email format, user has to conduct duplicates check by clicking on 'check duplicates'
+- For nickname as well, user has to conduct duplicates check by clicking on 'check duplicates'
+- Password must be typed double time to check for user confirmation
 # Log-in page (id input must comply with email format)
 ![login](https://user-images.githubusercontent.com/70088347/122657852-04c72800-d1a2-11eb-9065-8f0bba7149f6.png)
 ![login_format_chk](https://user-images.githubusercontent.com/70088347/122657900-6a1b1900-d1a2-11eb-9e22-1e51834de595.png)
