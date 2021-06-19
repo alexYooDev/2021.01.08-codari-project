@@ -1,4 +1,3 @@
-![main_page](https://user-images.githubusercontent.com/70088347/122657742-44d9db00-d1a1-11eb-97ec-27d89cd44f34.png)
 # 2021.01.08-codari-project
 K-move Java Enterprise Developer Course Team project
 
@@ -25,5 +24,13 @@ Technologies used to develop this project comprises:
   - Maven Apache Tomcat
   - Mybatis
   - Spring Boot
-  
+
+Demonstration:
+# main page
+![main_page](https://user-images.githubusercontent.com/70088347/122657742-44d9db00-d1a1-11eb-97ec-27d89cd44f34.png)
+# Daily Updated Korea COVID-19 Status Tracker
+![logged_in](https://user-images.githubusercontent.com/70088347/122657775-7783d380-d1a1-11eb-9f22-f6dd9bf70171.png)
+# COVID-19 Keyword Cloud from NAVER portal
+![keywords_uploaded](https://user-images.githubusercontent.com/70088347/122657802-aef28000-d1a1-11eb-9b66-413d9df3fb2a.png)
+
   latest update date: as of June 18th 2021
