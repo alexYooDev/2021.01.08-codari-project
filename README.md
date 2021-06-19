@@ -30,7 +30,12 @@ Demonstration:
 ![main_page](https://user-images.githubusercontent.com/70088347/122657742-44d9db00-d1a1-11eb-97ec-27d89cd44f34.png)
 # Daily Updated Korea COVID-19 Status Tracker
 ![logged_in](https://user-images.githubusercontent.com/70088347/122657775-7783d380-d1a1-11eb-9f22-f6dd9bf70171.png)
+# Detailed COVID-19 status by provinces
+![corona_detail_info](https://user-images.githubusercontent.com/70088347/122657832-de08f180-d1a1-11eb-9a0d-e1896ff28c9d.png)
 # COVID-19 Keyword Cloud from NAVER portal
 ![keywords_uploaded](https://user-images.githubusercontent.com/70088347/122657802-aef28000-d1a1-11eb-9b66-413d9df3fb2a.png)
+# Log-in page
+![login](https://user-images.githubusercontent.com/70088347/122657852-04c72800-d1a2-11eb-9065-8f0bba7149f6.png)
+
 
   latest update date: as of June 18th 2021
