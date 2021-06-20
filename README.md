@@ -90,5 +90,5 @@ Demonstration:
 ![cts_specified](https://user-images.githubusercontent.com/70088347/122658503-106a1d00-d1a9-11eb-9c86-15b603c5e82e.png)
 # COVID-19 Specialized Hospital List
 ![covid_specialized_hospital](https://user-images.githubusercontent.com/70088347/122658510-211a9300-d1a9-11eb-85d3-51475795ea06.png)
-![csh_specified](https://user-images.githubusercontent.com/70088347/122658513-24ae1a00-d1a9-11eb-80da-44cf6fdb2c09.png)
-  latest update date: as of June 18th 2021
+
+  latest update date: as of June 20th 2021
