@@ -25,6 +25,11 @@ Technologies used to develop this project comprises:
   - Mybatis
   - Spring Boot
 
+APIs from:
+공공데이터포털: https://www.data.go.kr 
+(COVID-19 info API, COVID-19 Medical Center API)
+
+
 Demonstration:
 # main page
 ![main_page](https://user-images.githubusercontent.com/70088347/122657742-44d9db00-d1a1-11eb-97ec-27d89cd44f34.png)
