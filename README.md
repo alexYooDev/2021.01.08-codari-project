@@ -41,7 +41,7 @@ APIs from:
 ![keywords_uploaded](https://user-images.githubusercontent.com/70088347/122657802-aef28000-d1a1-11eb-9b66-413d9df3fb2a.png)
 # Sign-up page
 ![sign_up_page](https://user-images.githubusercontent.com/70088347/122657996-502e0600-d1a3-11eb-8e59-ec1e4f83b6c2.png)
-- accessible either through sign-up menu in side bar or log-in page.
+- Accessible either through sign-up menu in side bar or log-in page.
 - ID input must comply with email format, user has to conduct duplicates check by clicking on 'check duplicates'.
 - For nickname as well, user has to conduct duplicates check by clicking on 'check duplicates'.
 - Password must be typed double time to check for user confirmation.
@@ -51,48 +51,48 @@ APIs from:
 - Log-in success directs to main page.
 # My Page
 ![my_page](https://user-images.githubusercontent.com/70088347/122658517-41e2e880-d1a9-11eb-8e10-0576f6baf19a.png)
-- user can view: ID and nickname
-- updatable, self-deletable
+- User can view: ID and Nickname
+- Updatable, Self-deletable
 # My Info update
 ![my_info_update](https://user-images.githubusercontent.com/70088347/122658531-650d9800-d1a9-11eb-87dc-a5bcd4a64f70.png)
-- user can modify id and nickname
+- User can modify Id and Nickname
 # Notice Board
 ![notice_list](https://user-images.githubusercontent.com/70088347/122658324-da2b9e00-d1a6-11eb-9bd7-7fa038dee85a.png)
-- Page for system related anouncement.
+- Page for System Related Anouncement.
 # Notice Detail Page
 ![notice_detail](https://user-images.githubusercontent.com/70088347/122658344-0e06c380-d1a7-11eb-812d-5356e631f427.png)
-- view of the content of the anouncement.
-- upadate, delete available.
+- View of the Content of the Anouncement.
+- Updatable, Deletable.
 # Notice Detail Update Page
 ![notice_update](https://user-images.githubusercontent.com/70088347/122658357-3393cd00-d1a7-11eb-9e0c-9e67fcca6fde.png)
-- font-size, font-color, highlight-color modification, photo, file upload, etc.. available by summernote add-on.
+- Font-Size, Font-Color, Highlight-Color Modification, Photo, File upload, etc.. available by summernote add-on.
 # Fact Check Board
 ![fact_check_page](https://user-images.githubusercontent.com/70088347/122658383-81a8d080-d1a7-11eb-8dc8-4f82b9ddaa22.png)
-- Space for true information to correct user's misconception about COVID-19.
+- Space for True Information to Correct User's Misconception of COVID-19.
 # Fact Check Detail Page
 ![fact_check_detail](https://user-images.githubusercontent.com/70088347/122658405-ca608980-d1a7-11eb-9ca7-272ab7c27316.png)
-- provide true or false for the subject information.
+- Provide True or False for the Subject Information.
 # Fact Check Create Page
 ![fact_check_create](https://user-images.githubusercontent.com/70088347/122658417-f11ec000-d1a7-11eb-98e8-b1278b694395.png)
-- Can create contents using summernote editor, files and photos uploadable.
+- Can Create Contents Using Summernote Editor, Files and Photos uploadable.
 # Community Board
 ![community_board](https://user-images.githubusercontent.com/70088347/122658435-39d67900-d1a8-11eb-892c-6aa3fe2571d4.png)
-- Space for exchanging COVID-19 related information
+- Space for Exchanging COVID-19 Related Information
 # Board Detail
 ![board_detail](https://user-images.githubusercontent.com/70088347/122658445-612d4600-d1a8-11eb-9912-0752a4d9c924.png)
-- content updatable, deletable (by admin or content owner), commentable
+- Content Updatable, Deletable (by admin or content owner), Commentable
 # Medical Center Page
 ![medical_center_select](https://user-images.githubusercontent.com/70088347/122658464-93d73e80-d1a8-11eb-9263-3d3d2f7a5ca9.png)
-- user can select either: COVID-19 Safe Hospital, COVID-19 Test Site, COVID-19 Specialized Hospital
+- User can Select either: COVID-19 Safe Hospital, COVID-19 Test Site, COVID-19 Specialized Hospital
 # COVID-19 Safe Hospital List
 ![covid_safe_hospital_list](https://user-images.githubusercontent.com/70088347/122658484-ddc02480-d1a8-11eb-9691-a7a49955d23d.png)
-- full list of hospital safe from COVID-19 infection
+- List of Hospital Safe from COVID-19 Infection
 ![csh_specified](https://user-images.githubusercontent.com/70088347/122658488-e7498c80-d1a8-11eb-9ec5-5e66c45b8cf9.png)
-- user can specify the hospitals by region name
+- User can Specify the Hospitals by Region Name
 # COVID-19 Test Site List
 ![covid_test_sites](https://user-images.githubusercontent.com/70088347/122658500-0f38f000-d1a9-11eb-8ce9-a922ec069247.png)
 ![cts_specified](https://user-images.githubusercontent.com/70088347/122658503-106a1d00-d1a9-11eb-9c86-15b603c5e82e.png)
 # COVID-19 Specialized Hospital List
 ![covid_specialized_hospital](https://user-images.githubusercontent.com/70088347/122658510-211a9300-d1a9-11eb-85d3-51475795ea06.png)
 
-  latest update date: as of June 20th 2021
+Latest Update: as of June 20th 2021
