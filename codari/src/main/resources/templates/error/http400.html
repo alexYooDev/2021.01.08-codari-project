@@ -57,7 +57,7 @@ $(function() {
 			<div class="inner">
 				<!-- Header -->
 				<header id="header">
-					<a href="#" class="logo"><strong>코</strong>로나 정보, <strong>다</strong> <strong>이</strong>곳</a>
+					<a href="/" class="logo"><strong>코</strong>로나 정보, <strong>다</strong> <strong>이</strong>곳</a>
 					<ul th:if ="${session.userLoginInfo != null}" class="icons">
 						<li><span th:text="${session.userLoginInfo.user_nickname}"></span>님, 환영합니다.&nbsp;&nbsp;<a th:href = "@{/member/logoutProcess}" class="button small">로그아웃</a></li>
 					</ul>

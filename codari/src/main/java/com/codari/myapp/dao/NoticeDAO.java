@@ -1,6 +1,5 @@
 package com.codari.myapp.dao;
 
-
 import java.util.List;
 import java.util.Map;
 
@@ -13,13 +12,17 @@ import com.codari.myapp.vo.NoticeVO;
 @Mapper
 public interface NoticeDAO {
 	public List<NoticeVO> selectAll(Map<String, Integer> map);
+
 	public NoticeVO selectByNoticeId(int noticeid);
+
 	public NoticeVO detailNoticeById(int noticeid);
-	public int insert(NoticeVO notice) ;
-	public int update(NoticeVO notice) ;
-	public int delete(int noticeid) ;
+
+	public int insert(NoticeVO notice);
+
+	public int update(NoticeVO notice);
+
+	public int delete(int noticeid);
+
 	public void updateViewCnt(int notice_id);
-	
 
 }
-

@@ -83,24 +83,25 @@ public class FactController {
 
 		List<FactFileVO> files = fileService.selectByFactId(facts.getFact_id());
 		if (files != null) {
-			model.addAttribute("files", files);	
+			model.addAttribute("files", files);
 		}
 
 		log.info("=====================================================================");
 		log.info("[" + today + "] [GET] IP : [" + request.getRemoteAddr() + "] 유저가 " + id + "번쨰 펙트 체크 기사를 요청 ");
 		return "fact/factDetail";
 	}
-	
+
 	// 파일 다운로드
-	@RequestMapping(value = "/download", method = RequestMethod.GET )
-	public void download(String id, String f, HttpServletRequest request, HttpServletResponse response) throws IOException {
-		response.setHeader("Content-Disposition", "attachment;filename="+f);
+	@RequestMapping(value = "/download", method = RequestMethod.GET)
+	public void download(String id, String f, HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
+		response.setHeader("Content-Disposition", "attachment;filename=" + f);
 		String saveDir = request.getSession().getServletContext().getRealPath("file/" + f);
 		FileInputStream fi = new FileInputStream(saveDir);
 		ServletOutputStream sout = response.getOutputStream();
 		byte[] buf = new byte[1024];
 		int size = 0;
-		while((size = fi.read(buf, 0, 1024))!=-1){
+		while ((size = fi.read(buf, 0, 1024)) != -1) {
 			sout.write(buf, 0, size);
 		}
 		fi.close();
@@ -126,13 +127,14 @@ public class FactController {
 		String today = sdf.format(System.currentTimeMillis());
 		log.info("=====================================================================");
 		log.info("[" + today + "] [GET] IP : [" + request.getRemoteAddr() + "] 유저가 펙트 체크 기사 수정 요청 ");
-		model.addAttribute("fact", service.selectById(id));		
+		model.addAttribute("fact", service.selectById(id));
 		return "fact/factInsert";
 	}
 
 	// 유저가 게시글을 저장
 	@RequestMapping(value = "/fact/Insert.do", method = RequestMethod.POST)
-	public String factInsertPOST(HttpSession session, MultipartHttpServletRequest mtfRequest, HttpServletRequest request, Model model, FactVO fact) {
+	public String factInsertPOST(HttpSession session, MultipartHttpServletRequest mtfRequest,
+			HttpServletRequest request, Model model, FactVO fact) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		String today = sdf.format(System.currentTimeMillis());
 		// 로그인 사용자 가져오기
@@ -140,21 +142,20 @@ public class FactController {
 		MemberVO member = (MemberVO) obj;
 		fact.setUser_id(member.getUser_id());
 		int fileCnt = 0;
-		
+
 		List<MultipartFile> files = mtfRequest.getFiles("file");
 		String saveDir = request.getServletContext().getRealPath("file");
-		
-		
+
 		// 게시글이 insert 일때
 		if (fact.getFact_id() == 0) {
 			Integer result = service.insert(fact);
 			Integer getFactId = service.selectMaxId(fact.getFact_id());
-			
+
 			for (MultipartFile file : files) {
 				String originFileName = file.getOriginalFilename();
 				String uploadFileName = originFileName.substring(originFileName.lastIndexOf("\\") + 1);
 
-				try {				
+				try {
 					String realTime = new SimpleDateFormat("yyyyMMddHHmmss").format(System.currentTimeMillis());
 					String fileName = realTime + uploadFileName;
 					if (!fileName.equals(realTime)) {
@@ -174,19 +175,23 @@ public class FactController {
 				}
 			}
 			log.info("=====================================================================");
-			log.info(result > 0 ? "[" + today + "] [POST] IP : [" + request.getRemoteAddr() + "] 유저가 " + fileCnt + " 개 만큼 파일을 추가하여 펙트 체크 기사 추가 완료 요청 " : "추가 실패");
-			
+			log.info(
+					result > 0
+							? "[" + today + "] [POST] IP : [" + request.getRemoteAddr() + "] 유저가 " + fileCnt
+									+ " 개 만큼 파일을 추가하여 펙트 체크 기사 추가 완료 요청 "
+							: "추가 실패");
+
 		} else {
 			Integer getFactId = fact.getFact_id();
 			log.info("파일저장용 fact 가져오기 " + getFactId);
 			Integer deleteFile = fileService.delete(getFactId);
 			Integer result = service.update(fact);
-			
+
 			for (MultipartFile file : files) {
 				String originFileName = file.getOriginalFilename();
 				String uploadFileName = originFileName.substring(originFileName.lastIndexOf("\\") + 1);
 
-				try {				
+				try {
 					String realTime = new SimpleDateFormat("yyyyMMddHHmmss").format(System.currentTimeMillis());
 					String fileName = realTime + uploadFileName;
 					if (!fileName.equals(realTime)) {
@@ -206,7 +211,11 @@ public class FactController {
 				}
 			}
 			log.info("=====================================================================");
-			log.info(result > 0 ? "[" + today + "] [POST] IP : [" + request.getRemoteAddr() + "] 유저가 " + fileCnt +" 개 만큼 파일을 추가하여 펙트 체크 기사 수정 완료 요청 " : "수정 실패");
+			log.info(
+					result > 0
+							? "[" + today + "] [POST] IP : [" + request.getRemoteAddr() + "] 유저가 " + fileCnt
+									+ " 개 만큼 파일을 추가하여 펙트 체크 기사 수정 완료 요청 "
+							: "수정 실패");
 		}
 		return "redirect:/fact/factCheck";
 	}
@@ -217,9 +226,13 @@ public class FactController {
 		String today = sdf.format(System.currentTimeMillis());
 		Integer deleteFile = fileService.delete(id);
 		Integer result = service.delete(id);
-		
+
 		log.info("=====================================================================");
-		log.info(result > 0 ? "[" + today + "] [POST] IP : [" + request.getRemoteAddr() + "] 유저가 "+ deleteFile + "개의 파일과 함께 펙트 체크 기사 삭제 완료 요청 " : "삭제 실패");		
+		log.info(
+				result > 0
+						? "[" + today + "] [POST] IP : [" + request.getRemoteAddr() + "] 유저가 " + deleteFile
+								+ "개의 파일과 함께 펙트 체크 기사 삭제 완료 요청 "
+						: "삭제 실패");
 		return "redirect:/fact/factCheck";
 	}
 }

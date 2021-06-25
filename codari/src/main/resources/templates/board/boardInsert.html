@@ -3,16 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <title>코다리</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.css" integrity="sha512-MWdvo/Qqcf4pY1ecQUB1uBn0qLp19U/qJ1Rpp2BDZeuBA7YsFEwkvqR/+aG4BroPiAYDunKJ6X8R/Pmdt3p7oA==" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/theme/pastel-on-dark.min.css" integrity="sha512-kcwXu8swgWHAdTrmVuUiuJK0+VtDCVXhOpznpnZHfx84G78aGLqbEtu5MYN08zV3XpP719SPTOzrcfirU1JnDA==" crossorigin="anonymous" />	
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.css"
+	integrity="sha512-MWdvo/Qqcf4pY1ecQUB1uBn0qLp19U/qJ1Rpp2BDZeuBA7YsFEwkvqR/+aG4BroPiAYDunKJ6X8R/Pmdt3p7oA=="
+	crossorigin="anonymous" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/theme/pastel-on-dark.min.css"
+	integrity="sha512-kcwXu8swgWHAdTrmVuUiuJK0+VtDCVXhOpznpnZHfx84G78aGLqbEtu5MYN08zV3XpP719SPTOzrcfirU1JnDA=="
+	crossorigin="anonymous" />
 <link rel="stylesheet" href="/assets/css/main.css" />
 <link rel="shortcut icon" href="../img/favicon.ico" />
 <link rel="icon" href="../img/favicon.ico" />
 <script src="/js/jQuery/jquery-3.5.1.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.js" integrity="sha512-9fASXXoC6x4BKdqe6IcEYZnt4KPMiQx5YJIsiWevf2QpSXfPcXMj4MTzIbwQuKJRysBlRh1LGHIaQm/415WyEA==" crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.js"
+	integrity="sha512-9fASXXoC6x4BKdqe6IcEYZnt4KPMiQx5YJIsiWevf2QpSXfPcXMj4MTzIbwQuKJRysBlRh1LGHIaQm/415WyEA=="
+	crossorigin="anonymous"></script>
 <script src="/assets/js/summerNoteEditor.js"></script>
 </head>
 <body class="is-preload">
@@ -26,9 +40,12 @@
 
 				<!-- Header -->
 				<header id="header">
-					<a th:href="@{/}" class="logo"><strong>코</strong>로나 정보, <strong>다</strong> <strong>이</strong>곳</a>
-					<ul th:if ="${session.userLoginInfo != null}" class="icons">
-						<li><span th:text="${session.userLoginInfo.user_nickname}"></span>님, 환영합니다.&nbsp;&nbsp;<a th:href = "@{/member/logoutProcess}" class="button small">로그아웃</a></li>
+					<a th:href="@{/}" class="logo"><strong>코</strong>로나 정보, <strong>다</strong>
+						<strong>이</strong>곳</a>
+					<ul th:if="${session.userLoginInfo != null}" class="icons">
+						<li><span th:text="${session.userLoginInfo.user_nickname}"></span>님,
+							환영합니다.&nbsp;&nbsp;<a th:href="@{/member/logoutProcess}"
+							class="button small">로그아웃</a></li>
 					</ul>
 				</header>
 
@@ -38,35 +55,39 @@
 						<header>
 							<h1>새 게시물등록</h1>
 						</header>
-						</div>
-						</section>
-						<section>
+					</div>
+				</section>
+				<section>
 					<div class="features">
 
-					  <form th:action="@{/board/boardInsert.do}" id="ctnt" th:method="post">
-					  	<input type="hidden" th:name="${user_nickname}" th:value="${session.userLoginInfo.user_nickname}"><br>
-						  	   제목:<input type="text" th:name="board_title"><br>
-						  	 		 카테고리:<select name="board_category_name">
-											<option value="" disabled="disabled">- Category -</option>
-											<option value="제보">제보</option>
-											<option value="국내">국내</option>
-											<option value="해외">해외</option>
-											<option value="뉴스">뉴스</option>
-											<option value="기타">기타</option>
-							  		</select>
-						  	  <br>
-							   내용:<div class="col-10">
-										<textarea th:utext="${board_content}" th:name="board_content" id="summernote"></textarea></div><br>
-								 <input type="hidden" th:name="created_date" th:value="${created_date}">
-								 <input type="hidden" th:name="modified_date" th:value="${modified_date}">
-								 <input type="hidden" th:name="user_id" th:value="${session.userLoginInfo.user_id}">
-								 
- 						  	     <input id="btn1" type="submit" th:value="입력하기">
-					  </form>
+						<form th:action="@{/board/boardInsert.do}" id="ctnt"
+							th:method="post">
+							<input type="hidden" th:name="${user_nickname}"
+								th:value="${session.userLoginInfo.user_nickname}"><br>
+							제목:<input type="text" th:name="board_title"><br>
+							카테고리:<select name="board_category_name">
+								<option value="" disabled="disabled">- Category -</option>
+								<option value="제보">제보</option>
+								<option value="국내">국내</option>
+								<option value="해외">해외</option>
+								<option value="뉴스">뉴스</option>
+								<option value="기타">기타</option>
+							</select> <br> 내용:
+							<div class="col-10">
+								<textarea th:utext="${board_content}" th:name="board_content"
+									id="summernote"></textarea>
+							</div>
+							<br> <input type="hidden" th:name="created_date"
+								th:value="${created_date}"> <input type="hidden"
+								th:name="modified_date" th:value="${modified_date}"> <input
+								type="hidden" th:name="user_id"
+								th:value="${session.userLoginInfo.user_id}"> <input
+								id="btn1" type="submit" th:value="입력하기">
+						</form>
 					</div>
-					  </section>
-				</div>
+				</section>
 			</div>
+		</div>
 		<!-- Sidebar -->
 		<div id="sidebar">
 			<div class="inner">
@@ -83,16 +104,19 @@
 								<li><a href="/fact/factCheck">Fact Check</a></li>
 								<li><a href="/board/boardAll.do">정보 공유</a></li>
 								<li><a href="/covid/covidHospitalHome.do">실시간 병원 정보</a></li>
-							</ul>
-						</li>
-						<li th:if="${session.userLoginInfo != null}"><a th:href="@{/member/myPage.do}">마이페이지</a></li>
-						<li th:if="${session.userLoginInfo == null}"><a th:href="@{/member/login}">로그인 페이지</a></li>
-						<li th:if="${session.userLoginInfo == null}"><a th:href="@{/member/register}">회원 가입</a></li>
-						<li th:if="${session.userLoginInfo != null && session.userLoginInfo.user_role == 'admin'}"><span class="opener">관리자 페이지</span>
+							</ul></li>
+						<li th:if="${session.userLoginInfo != null}"><a
+							th:href="@{/member/myPage.do}">마이페이지</a></li>
+						<li th:if="${session.userLoginInfo == null}"><a
+							th:href="@{/member/login}">로그인 페이지</a></li>
+						<li th:if="${session.userLoginInfo == null}"><a
+							th:href="@{/member/register}">회원 가입</a></li>
+						<li
+							th:if="${session.userLoginInfo != null && session.userLoginInfo.user_role == 'admin'}"><span
+							class="opener">관리자 페이지</span>
 							<ul>
 								<li><a href="/member/memberAll.do">유저 목록</a></li>
-							</ul>
-						</li>
+							</ul></li>
 					</ul>
 				</nav>
 
@@ -106,7 +130,9 @@
 					<ul class="contact">
 						<li class="icon solid fa-envelope"><a href="#">codari@gmail.com</a></li>
 						<li class="icon solid fa-phone">(02) 123-4567</li>
-						<li class="icon solid fa-home">서울시 성북구 한성대학교 #02876<br />Korea, TN 02-760-5800</li>
+						<li class="icon solid fa-home">서울시 성북구 한성대학교 #02876<br />Korea,
+							TN 02-760-5800
+						</li>
 					</ul>
 				</section>
 
@@ -116,8 +142,10 @@
 						&copy; 2020 -
 						<script>
 							document.write(new Date().getFullYear());
-						</script> 
-						All rights reserved. <br>Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.
+						</script>
+						All rights reserved. <br>Demo Images: <a
+							href="https://unsplash.com">Unsplash</a>. Design: <a
+							href="https://html5up.net">HTML5 UP</a>.
 					</p>
 				</footer>
 			</div>
@@ -131,7 +159,9 @@
 	<script src="/assets/js/breakpoints.min.js"></script>
 	<script src="/assets/js/util.js"></script>
 	<script src="/assets/js/main.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

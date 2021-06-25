@@ -13,21 +13,21 @@ import com.codari.myapp.vo.FactVO;
 public class FactFileService {
 	@Autowired
 	FactFileDAO dao;
-	
+
 	public List<FactFileVO> selectByFactId(int factid) {
 		return dao.selectByFactId(factid);
 	}
-	
+
 	public FactFileVO selectById(int factid) {
 		return dao.selectById(factid);
 	}
-	
+
 	public int insert(FactFileVO file) {
 		return dao.insert(file);
-	}	
-	
+	}
+
 	public int delete(int factid) {
 		return dao.delete(factid);
 	}
-	
+
 }

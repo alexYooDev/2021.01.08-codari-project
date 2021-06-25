@@ -13,16 +13,18 @@ import com.codari.myapp.vo.CovidHospVO;
 
 @Service
 public class CovidHospService {
-	
+
 	@Autowired
 	CovidHospDAO dao;
 
 	public List<CovidHospVO> covidHospital() {
 		return new CovidHospParser().getHospInfo();
 	}
+
 	public List<CovidHospVO> covidHospital2() {
 		return new CovidHospParser2().getHospInfo2();
 	}
+
 	public List<CovidHospVO> covidHospital3() {
 		return new CovidHospParser3().getHospInfo3();
 	}

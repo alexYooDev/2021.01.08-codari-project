@@ -28,7 +28,7 @@
 
 				<!-- Header -->
 				<header id="header">
-					<a th:href="@{/index}" class="logo"><strong>코</strong>로나 정보, <strong>다</strong><strong>이</strong>곳</a>
+					<a href="/" class="logo"><strong>코</strong>로나 정보, <strong>다</strong><strong>이</strong>곳</a>
 					<ul th:if="${session.userLoginInfo != null}" class="icons">
 						<li><span th:text="${session.userLoginInfo.user_nickname}"></span>님,
 							환영합니다.&nbsp;&nbsp;<a th:href="@{/member/logoutProcess}"
@@ -64,8 +64,8 @@
 								<td><a
 									th:href="@{'memberDetail.do?userid='+${user.user_id}}"
 									th:text="${user.user_email}"></a></td>
-								<td th:text="${member.user_nickname}"></td>
-								<td th:text="${member.user_role}"></td>
+								<td th:text="${user.user_nickname}"></td>
+								<td th:text="${user.user_role}"></td>
 								<td id="delete"><a class="button"
 									th:href="@{'/member/memberDelete2.do?userid='+${user.user_id}}">강제탈퇴</a></td>
 							</tr>

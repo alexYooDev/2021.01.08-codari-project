@@ -16,7 +16,6 @@ import com.codari.myapp.vo.MemberVO;
 
 import lombok.extern.slf4j.Slf4j;
 
-
 @Slf4j
 @Controller
 public class RegisterController {
@@ -27,7 +26,7 @@ public class RegisterController {
 	@Autowired
 	PasswordEncoder passwordEncoder;
 
-	@RequestMapping(value="/member/register", method = RequestMethod.GET)
+	@RequestMapping(value = "/member/register", method = RequestMethod.GET)
 	public String MemberRegisterGet(Model model, MemberVO member) {
 		model.addAttribute("user", member);
 		return "member/register";
@@ -39,18 +38,18 @@ public class RegisterController {
 	public int postIdCheck(HttpServletRequest req) throws Exception {
 
 		String user_email = req.getParameter("user_email");
-		MemberVO idCheck =  service.idCheck(user_email);
+		MemberVO idCheck = service.idCheck(user_email);
 
 		int result = 0;
 
-		if(idCheck != null) {
+		if (idCheck != null) {
 			result = 1;
-		} 
+		}
 		return result;
 	}
 
-	@RequestMapping(value="/member/memberRegister.do", method = RequestMethod.POST)
-	public String MemberRegisterPost(Model model,  MemberVO member) {
+	@RequestMapping(value = "/member/memberRegister.do", method = RequestMethod.POST)
+	public String MemberRegisterPost(Model model, MemberVO member) {
 		passwordEncoder = new BCryptPasswordEncoder();
 		String encodePassword = passwordEncoder.encode(member.getUser_password());
 		member.setUser_password(encodePassword);
@@ -63,13 +62,13 @@ public class RegisterController {
 	public int postNicCheck(HttpServletRequest req) throws Exception {
 
 		String user_nickname = req.getParameter("user_nickname");
-		MemberVO nicCheck =  service.nicCheck(user_nickname);
+		MemberVO nicCheck = service.nicCheck(user_nickname);
 
 		int result = 0;
 
-		if(nicCheck != null) {
+		if (nicCheck != null) {
 			result = 1;
-		} 
+		}
 
 		return result;
 	}

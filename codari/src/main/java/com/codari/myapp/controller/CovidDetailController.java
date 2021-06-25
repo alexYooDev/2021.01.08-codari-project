@@ -12,9 +12,9 @@ public class CovidDetailController {
 
 	@Autowired
 	CovidDetailService service;
-	
+
 	@RequestMapping(value = "/covid/covidDetail")
-	public String CovidDetailGet(Model model) { 
+	public String CovidDetailGet(Model model) {
 		model.addAttribute("itemlist", service.covidDetail());
 		return "/covid/covidDetail";
 	}

@@ -11,10 +11,10 @@ import com.codari.myapp.vo.FactFileVO;
 @Mapper
 public interface FactFileDAO {
 	public int insert(FactFileVO file);
-	
+
 	public FactFileVO selectById(int factid);
-	
+
 	public List<FactFileVO> selectByFactId(int factid);
-	
+
 	public int delete(int factid);
 }

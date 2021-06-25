@@ -15,10 +15,9 @@ public class CovidDetailVO implements Comparable<CovidDetailVO> {
 	private String localOccCnt;
 	private String overFlowCnt;
 	private String stdDay;
-	
+
 	@Override
-	public int compareTo(CovidDetailVO cd) { //비교
-		// TODO Auto-generated method stub
-		return gubun.compareTo(cd.gubun); //문자 비교, 어센딩 소트
+	public int compareTo(CovidDetailVO cd) { 
+		return gubun.compareTo(cd.gubun); 
 	}
 }

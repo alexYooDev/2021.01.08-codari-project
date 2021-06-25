@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CovidInfoVO implements Comparable<CovidInfoVO> { //비교 능력이 있어요.
+public class CovidInfoVO implements Comparable<CovidInfoVO> {
 	
 	private String stateDt;
 	private String decideCnt;
@@ -26,8 +26,7 @@ public class CovidInfoVO implements Comparable<CovidInfoVO> { //비교 능력이
 	private String dailyClCnt;
 	
 	@Override
-	public int compareTo(CovidInfoVO o) { //비교
-		// TODO Auto-generated method stub
-		return stateDt.compareTo(o.stateDt); //문자 비교, 어센딩 소트
+	public int compareTo(CovidInfoVO o) { 
+		return stateDt.compareTo(o.stateDt); 
 	}
 }

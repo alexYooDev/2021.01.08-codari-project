@@ -10,7 +10,7 @@ function getReplyList(){
         url: "/board/replyList.do", 
         data: {"bid": $("#board_id").val()},
         success: function(data){ 
-            $(`#replyList`).html(data);
+            $('#replyList').html(data);
             $('#replyList').val().replace(/\n/g, "<br>");
         }
     });
@@ -23,7 +23,7 @@ function getAddReply(){
 		url: "/board/addReply.do",
 		data: {"bid" : $("#board_id").val()},
 		success: function(data){ 
-	         $(`#addReply`).html(data);
+	         $('#addReply').html(data);
 	        }
 	}); 
 	

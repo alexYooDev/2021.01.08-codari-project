@@ -11,5 +11,5 @@ import com.codari.myapp.vo.CovidDetailVO;
 @Mapper
 public interface CovidDetailDAO {
 
-		public List<CovidDetailVO> covidDetail();
+	public List<CovidDetailVO> covidDetail();
 }

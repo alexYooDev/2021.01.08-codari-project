@@ -9,12 +9,12 @@ import com.codari.myapp.service.CovidInfoService;
 
 @Controller
 public class CovidInfoController {
-	
+
 	@Autowired
 	CovidInfoService service;
-	
+
 	@RequestMapping(value = "/covid/covidInfo")
-	public String CovidInfoGet(Model model) { 
+	public String CovidInfoGet(Model model) {
 		model.addAttribute("itemlist", service.covidInfo());
 		return "/covid/covidInfo";
 	}

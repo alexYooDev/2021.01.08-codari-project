@@ -1,7 +1,5 @@
 package com.codari.myapp.controller;
 
-
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,31 +23,32 @@ public class NoticeController {
 
 	@Autowired
 	NoticeService noticeService;
-	
+
 	@Autowired
 	MemberService memberService;
-	
+
 	@RequestMapping(value = "/notice/noticeList.do")
 	public String noticelist(Model model) {
 		model.addAttribute("noticelist", noticeService.selectAll(1));
 		model.addAttribute("pageCount", 10);
 		return "notice/noticeList";
 	}
-	
+
 	@RequestMapping(value = "/notice/noticeList.doN")
 	public String noticelistPaging(Model model, int pageNum) {
 		model.addAttribute("noticelist", noticeService.selectAll(pageNum));
 		model.addAttribute("pageCount", 10);
 		return "notice/noticeList_page";
 	}
-	
+
 	@RequestMapping(value = "notice/noticeDetail.do")
 	String noticeDetailById(Model model, @RequestParam("notice_id") int notice_id) {
 		noticeService.updateViewCnt(notice_id);
 		model.addAttribute("notice", noticeService.selectByNoticeId(notice_id));
 		return "notice/noticeDetail";
-		
-		}
+
+	}
+
 	@RequestMapping(value = "notice/noticeInsert.do", method = RequestMethod.GET)
 	public String noticeInsertGet() {
 		return "notice/noticeInsert";
@@ -60,20 +59,20 @@ public class NoticeController {
 	public String noticeInsertPost(NoticeVO notice, Model model) {
 
 		int ret = noticeService.insert(notice);
-		return ret>0 ? "작성되었습니다" : "입력실패(error)";
+		return ret > 0 ? "작성되었습니다" : "입력실패(error)";
 	}
-	
+
 	@RequestMapping(value = "notice/noticeUpdate.do")
 	public String noticeUpdateGet(Model model, @RequestParam("notice_id") int notice_id) {
 		model.addAttribute("notice", noticeService.selectByNoticeId(notice_id));
 		return "notice/noticeUpdate";
 	}
 
-	@RequestMapping(value = "notice/noticeUpdateView.do",method=RequestMethod.POST)
+	@RequestMapping(value = "notice/noticeUpdateView.do", method = RequestMethod.POST)
 	@ResponseBody
 	public String noticeUpdatePost(NoticeVO notice, Model model) {
 		int ret = noticeService.update(notice);
-		return ret>0 ? "수정되었습니다." : "수정실패(error)";
+		return ret > 0 ? "수정되었습니다." : "수정실패(error)";
 	}
 
 	@RequestMapping(value = "notice/noticeDelete.do")
@@ -87,7 +86,7 @@ public class NoticeController {
 			String getRole = member.getUser_role();
 			if (!getRole.equals("") || getRole.equals("admin")) {
 				int ret = noticeService.delete(notice_id);
-				return ret>0 ? "/notice/noticeList.do" : "/";
+				return ret > 0 ? "/notice/noticeList.do" : "/";
 			}
 			return "/";
 		}
