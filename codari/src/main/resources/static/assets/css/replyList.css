@@ -1,0 +1,6 @@
+	@import url("/css/fackfont.css");
+	td{ vertical-align: middle;}
+	#date{ width: 15%;}
+	#nickname{ width: 12%;}
+	#contents{ text-align:left;}
+	#delete{ width: 7%; border-collapse: collapse;}
