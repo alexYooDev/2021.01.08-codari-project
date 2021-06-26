@@ -64,17 +64,17 @@ APIs from:
 ![my_info_update](https://user-images.githubusercontent.com/70088347/122658531-650d9800-d1a9-11eb-87dc-a5bcd4a64f70.png)
 - User can modify Id and Nickname
 
-# User Info (For Admin)
+# User Info (Admin Accont Only)
 ![user_list](https://user-images.githubusercontent.com/70088347/123497211-33904300-d667-11eb-9aa6-499c20d6091c.png)
-- Admin can access to whole user list (deport user button available)
+- Admin can Access to Whole User List (Deport User Function Available)
 
 # User Modification
 ![user_modfication](https://user-images.githubusercontent.com/70088347/123497227-3f7c0500-d667-11eb-97c3-18d88826fa6d.png)
-- Admin can manually modify user's information (except for password && user code)
+- Admin can Manually Modify User's Information (Except For Passwords && User Indices)
 
 # User Insert
 ![user_insert](https://user-images.githubusercontent.com/70088347/123497220-3b4fe780-d667-11eb-82a0-2000e2c093f2.png)
-- Admin can manually add user account for the web site (admin account or user account)
+- Admin can Manually Add User Account for the Web Site (Admin Account or User Account)
 
 # Notice Board
 ![notice_list](https://user-images.githubusercontent.com/70088347/122658324-da2b9e00-d1a6-11eb-9bd7-7fa038dee85a.png)
