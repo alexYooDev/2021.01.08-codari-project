@@ -63,6 +63,19 @@ APIs from:
 # My Info update
 ![my_info_update](https://user-images.githubusercontent.com/70088347/122658531-650d9800-d1a9-11eb-87dc-a5bcd4a64f70.png)
 - User can modify Id and Nickname
+
+# User Info (For Admin)
+![user_list](https://user-images.githubusercontent.com/70088347/123497010-23c42f00-d666-11eb-8a7a-8d8f85d6f8a2.png)
+-Admin can access to whole user list (deport user button available)
+
+# User Insert
+![user_insert](https://user-images.githubusercontent.com/70088347/123497035-422a2a80-d666-11eb-84b7-c7886f0225fa.png)
+- Admin can manually add user account for the web site (admin account or user account)
+
+# User Modification
+![user_modfication](https://user-images.githubusercontent.com/70088347/123497101-9c2af000-d666-11eb-803e-79c0da23b270.png)
+- Admin can manually modify user's information (except for password && user code)
+
 # Notice Board
 ![notice_list](https://user-images.githubusercontent.com/70088347/122658324-da2b9e00-d1a6-11eb-9bd7-7fa038dee85a.png)
 - Page for System Related Anouncement.
@@ -92,8 +105,8 @@ APIs from:
 - Space for Exchanging COVID-19 Related Information.
 
 # Board Detail
-![board_detail](https://user-images.githubusercontent.com/70088347/122658445-612d4600-d1a8-11eb-9912-0752a4d9c924.png)
-- Content Updatable, Deletable (by admin or content owner), Commentable.
+![board_detail_reply](https://user-images.githubusercontent.com/70088347/123496982-fbd4cb80-d665-11eb-8ab5-ae4a2b7babd8.png)
+- Content Updatable, Deletable (by admin or content owner), Commentable(deletable).
 
 # Medical Center Page
 ![medical_center_select](https://user-images.githubusercontent.com/70088347/122658464-93d73e80-d1a8-11eb-9263-3d3d2f7a5ca9.png)
@@ -112,4 +125,4 @@ APIs from:
 # COVID-19 Specialized Hospital List
 ![covid_specialized_hospital](https://user-images.githubusercontent.com/70088347/122658510-211a9300-d1a9-11eb-85d3-51475795ea06.png)
 
-Latest Update: as of June 20th 2021
+Latest Update: as of June 26th 2021
