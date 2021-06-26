@@ -65,20 +65,21 @@ APIs from:
 - User can modify Id and Nickname
 
 # User Info (For Admin)
-![user_list](https://user-images.githubusercontent.com/70088347/123497010-23c42f00-d666-11eb-8a7a-8d8f85d6f8a2.png)
--Admin can access to whole user list (deport user button available)
-
-# User Insert
-![user_insert](https://user-images.githubusercontent.com/70088347/123497035-422a2a80-d666-11eb-84b7-c7886f0225fa.png)
-- Admin can manually add user account for the web site (admin account or user account)
+![user_list](https://user-images.githubusercontent.com/70088347/123497211-33904300-d667-11eb-9aa6-499c20d6091c.png)
+- Admin can access to whole user list (deport user button available)
 
 # User Modification
-![user_modfication](https://user-images.githubusercontent.com/70088347/123497101-9c2af000-d666-11eb-803e-79c0da23b270.png)
+![user_modfication](https://user-images.githubusercontent.com/70088347/123497227-3f7c0500-d667-11eb-97c3-18d88826fa6d.png)
 - Admin can manually modify user's information (except for password && user code)
+
+# User Insert
+![user_insert](https://user-images.githubusercontent.com/70088347/123497220-3b4fe780-d667-11eb-82a0-2000e2c093f2.png)
+- Admin can manually add user account for the web site (admin account or user account)
 
 # Notice Board
 ![notice_list](https://user-images.githubusercontent.com/70088347/122658324-da2b9e00-d1a6-11eb-9bd7-7fa038dee85a.png)
 - Page for System Related Anouncement.
+
 # Notice Detail Page
 ![notice_detail](https://user-images.githubusercontent.com/70088347/122658344-0e06c380-d1a7-11eb-812d-5356e631f427.png)
 - View of the Content of the Anouncement.
@@ -105,7 +106,7 @@ APIs from:
 - Space for Exchanging COVID-19 Related Information.
 
 # Board Detail
-![board_detail_reply](https://user-images.githubusercontent.com/70088347/123496982-fbd4cb80-d665-11eb-8ab5-ae4a2b7babd8.png)
+![board_detail_reply](https://user-images.githubusercontent.com/70088347/123497246-53c00200-d667-11eb-8205-ff8d46e1ed28.png)
 - Content Updatable, Deletable (by admin or content owner), Commentable(deletable).
 
 # Medical Center Page
