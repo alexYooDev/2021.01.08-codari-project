@@ -16,12 +16,10 @@ This project aims to provide:
  
 Technologies used to develop this project comprises:
 
-  - HTML(thymeleaf),CSS,Javascript
-  - Jquery
+  - HTML(thymeleaf),CSS,Jquery
   - JAVA
   - MariaDB
-  - MySQL
-  - Maven Apache Tomcat
+  - Apache Tomcat (WAS)
   - Mybatis
   - Spring Boot
 
