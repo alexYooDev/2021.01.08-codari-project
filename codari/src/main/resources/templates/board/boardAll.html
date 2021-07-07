@@ -49,12 +49,12 @@
 
 					<table border="1">
 						<tr id="head">
-							<td width="4%">번호</td>
-							<td width="10%">카테고리</td>
-							<td>제목</td>
-							<td width="10%">작성자</td>
-							<td width="10%">게시일</td>
-							<td width="7%">조회수</td>
+							<td class="board_id">번호</td>
+							<td class="board_category">카테고리</td>
+							<td class="board_title">제목</td>
+							<td class="user_nickname">작성자</td>
+							<td class="created_date">게시일</td>
+							<td class="board_view">조회수</td>
 						</tr>
 						<tr th:each="board : ${boardlist}">
 							<td th:text="${board.board_id}"></td>
