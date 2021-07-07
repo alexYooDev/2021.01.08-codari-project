@@ -16,12 +16,10 @@ This project aims to provide:
  
 Technologies used to develop this project comprises:
 
-  - HTML(thymeleaf),CSS,Javascript
-  - Jquery
+  - HTML(thymeleaf),CSS,Jquery
   - JAVA
   - MariaDB
-  - MySQL
-  - Maven Apache Tomcat
+  - Apache Tomcat (WAS)
   - Mybatis
   - Spring Boot
 
@@ -63,9 +61,23 @@ APIs from:
 # My Info update
 ![my_info_update](https://user-images.githubusercontent.com/70088347/122658531-650d9800-d1a9-11eb-87dc-a5bcd4a64f70.png)
 - User can modify Id and Nickname
+
+# User Info (Admin Accont Only)
+![user_list](https://user-images.githubusercontent.com/70088347/123497211-33904300-d667-11eb-9aa6-499c20d6091c.png)
+- Admin can Access to Whole User List (Deport User Function Available)
+
+# User Modification
+![user_modfication](https://user-images.githubusercontent.com/70088347/123497227-3f7c0500-d667-11eb-97c3-18d88826fa6d.png)
+- Admin can Manually Modify User's Information (Except For Passwords && User Indices)
+
+# User Insert
+![user_insert](https://user-images.githubusercontent.com/70088347/123497220-3b4fe780-d667-11eb-82a0-2000e2c093f2.png)
+- Admin can Manually Add User Account for the Web Site (Admin Account or User Account)
+
 # Notice Board
 ![notice_list](https://user-images.githubusercontent.com/70088347/122658324-da2b9e00-d1a6-11eb-9bd7-7fa038dee85a.png)
 - Page for System Related Anouncement.
+
 # Notice Detail Page
 ![notice_detail](https://user-images.githubusercontent.com/70088347/122658344-0e06c380-d1a7-11eb-812d-5356e631f427.png)
 - View of the Content of the Anouncement.
@@ -92,8 +104,8 @@ APIs from:
 - Space for Exchanging COVID-19 Related Information.
 
 # Board Detail
-![board_detail](https://user-images.githubusercontent.com/70088347/122658445-612d4600-d1a8-11eb-9912-0752a4d9c924.png)
-- Content Updatable, Deletable (by admin or content owner), Commentable.
+![board_detail_reply](https://user-images.githubusercontent.com/70088347/123497246-53c00200-d667-11eb-8205-ff8d46e1ed28.png)
+- Content Updatable, Deletable (by admin or content owner), Commentable(deletable).
 
 # Medical Center Page
 ![medical_center_select](https://user-images.githubusercontent.com/70088347/122658464-93d73e80-d1a8-11eb-9263-3d3d2f7a5ca9.png)
@@ -112,4 +124,4 @@ APIs from:
 # COVID-19 Specialized Hospital List
 ![covid_specialized_hospital](https://user-images.githubusercontent.com/70088347/122658510-211a9300-d1a9-11eb-85d3-51475795ea06.png)
 
-Latest Update: as of June 20th 2021
+Latest Update: as of June 26th 2021
