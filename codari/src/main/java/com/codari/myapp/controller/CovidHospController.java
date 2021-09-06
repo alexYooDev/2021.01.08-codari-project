@@ -19,16 +19,16 @@ public class CovidHospController {
 		return "covid/covidHospital";
 	}
 
-	@RequestMapping(value = "/covid/covidHospital2.do")
-	public String covidHospGet2(Model model) {
-		model.addAttribute("items", covidHospService.covidHospital2());
-		return "covid/covidHospital2";
+	@RequestMapping(value = "/covid/covidSC.do")
+	public String covidSCGet(Model model) {
+		model.addAttribute("items", covidHospService.covidSC());
+		return "covid/covidSC";
 	}
 
-	@RequestMapping(value = "/covid/covidHospital3.do")
-	public String covidHospGet3(Model model) {
-		model.addAttribute("items", covidHospService.covidHospital3());
-		return "covid/covidHospital3";
+	@RequestMapping(value = "/covid/covidTestSite.do")
+	public String covidTSGet(Model model) {
+		model.addAttribute("items", covidHospService.covidTestSite());
+		return "covid/covidTestSite";
 	}
 
 	@RequestMapping(value = "/covid/covidHospitalHome.do")

@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.codari.myapp.covid.CovidHospParser;
-import com.codari.myapp.covid.CovidHospParser2;
-import com.codari.myapp.covid.CovidHospParser3;
+import com.codari.myapp.covid.CovidSCParser;
+import com.codari.myapp.covid.CovidTSParser;
 import com.codari.myapp.dao.CovidHospDAO;
 import com.codari.myapp.vo.CovidHospVO;
 
@@ -21,11 +21,11 @@ public class CovidHospService {
 		return new CovidHospParser().getHospInfo();
 	}
 
-	public List<CovidHospVO> covidHospital2() {
-		return new CovidHospParser2().getHospInfo2();
+	public List<CovidHospVO> covidSC() {
+		return new CovidSCParser().getSCInfo();
 	}
 
-	public List<CovidHospVO> covidHospital3() {
-		return new CovidHospParser3().getHospInfo3();
+	public List<CovidHospVO> covidTestSite() {
+		return new CovidTSParser().getTSInfo();
 	}
 }

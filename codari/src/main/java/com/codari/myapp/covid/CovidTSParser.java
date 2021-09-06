@@ -13,7 +13,7 @@ import org.w3c.dom.NodeList;
 
 import com.codari.myapp.vo.CovidHospVO;
 
-public class CovidHospParser3 {
+public class CovidTSParser {
 
 	private static String getTagValue(String tag, Element eElement) {
 		NodeList nlList = eElement.getElementsByTagName(tag).item(0).getChildNodes();
@@ -23,7 +23,7 @@ public class CovidHospParser3 {
 		return nValue.getNodeValue();
 	}
 
-	public List<CovidHospVO> getHospInfo3() {
+	public List<CovidHospVO> getTSInfo() {
 		List<CovidHospVO> chList = new ArrayList<>();
 		int page = 1;
 		try {
