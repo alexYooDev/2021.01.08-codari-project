@@ -18,7 +18,7 @@ import org.w3c.dom.NodeList;
 import com.codari.myapp.vo.CovidDetailVO;
 
 @lombok.extern.slf4j.Slf4j
-public class CovidTableParser2 {
+public class CovidDetailParser {
 	private static String getTagValue(String tag, Element eElement) {
 		NodeList nlList = eElement.getElementsByTagName(tag).item(0).getChildNodes();
 		Node nValue = (Node) nlList.item(0);

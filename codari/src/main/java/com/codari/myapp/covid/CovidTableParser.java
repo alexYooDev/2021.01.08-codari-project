@@ -69,24 +69,24 @@ public class CovidTableParser {
 					} // for end
 					ciList.sort(null);
 					for (int i = 1; i < ciList.size(); i++) {
-						int a = Integer.parseInt(ciList.get(i).getDecideCnt());
-						int b = Integer.parseInt(ciList.get(i - 1).getDecideCnt());
-						ciList.get(i).setDailyDecideCnt((a - b) + "");
-						int c = Integer.parseInt(ciList.get(i).getDeathCnt());
-						int d = Integer.parseInt(ciList.get(i - 1).getDeathCnt());
-						ciList.get(i).setDailyDeathCnt((c - d) + "");
-						int e = Integer.parseInt(ciList.get(i).getAccExamCnt());
-						int f = Integer.parseInt(ciList.get(i - 1).getAccExamCnt());
-						ciList.get(i).setDailyExCnt((e - f) + "");
-						int g = Integer.parseInt(ciList.get(i).getAccExamCompCnt());
-						int h = Integer.parseInt(ciList.get(i - 1).getAccExamCompCnt());
-						ciList.get(i).setDailyExcCnt((g - h) + "");
-						int j = Integer.parseInt(ciList.get(i).getResutlNegCnt());
-						int k = Integer.parseInt(ciList.get(i - 1).getResutlNegCnt());
-						ciList.get(i).setDailyRnCnt((j - k) + "");
-						int l = Integer.parseInt(ciList.get(i).getClearCnt());
-						int m = Integer.parseInt(ciList.get(i - 1).getClearCnt());
-						ciList.get(i).setDailyClCnt((l - m) + "");
+						int decDate = Integer.parseInt(ciList.get(i).getDecideCnt());
+						int decDatePrior = Integer.parseInt(ciList.get(i - 1).getDecideCnt());
+						ciList.get(i).setDailyDecideCnt((decDate - decDatePrior) + "");
+						int deathCnt = Integer.parseInt(ciList.get(i).getDeathCnt());
+						int deathCntPrior = Integer.parseInt(ciList.get(i - 1).getDeathCnt());
+						ciList.get(i).setDailyDeathCnt((deathCnt - deathCntPrior) + "");
+						int totalExamCnt = Integer.parseInt(ciList.get(i).getAccExamCnt());
+						int totalExamCntPrior = Integer.parseInt(ciList.get(i - 1).getAccExamCnt());
+						ciList.get(i).setDailyExCnt((totalExamCnt - totalExamCntPrior) + "");
+						int totalExamCompCnt = Integer.parseInt(ciList.get(i).getAccExamCompCnt());
+						int totalExamComptCntPrior = Integer.parseInt(ciList.get(i - 1).getAccExamCompCnt());
+						ciList.get(i).setDailyExcCnt((totalExamCompCnt - totalExamComptCntPrior) + "");
+						int negCnt = Integer.parseInt(ciList.get(i).getResutlNegCnt());
+						int negCntPrior = Integer.parseInt(ciList.get(i - 1).getResutlNegCnt());
+						ciList.get(i).setDailyRnCnt((negCnt - negCntPrior) + "");
+						int clearCnt = Integer.parseInt(ciList.get(i).getClearCnt());
+						int clearCntPrior = Integer.parseInt(ciList.get(i - 1).getClearCnt());
+						ciList.get(i).setDailyClCnt((clearCnt - clearCntPrior) + "");
 					}
 				} // if end
 
