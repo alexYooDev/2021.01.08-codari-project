@@ -1,13 +1,14 @@
 # 2021.01.08-codari-project
 K-move Java Enterprise Developer Course Team project
+Developed with Java-based Spring Framework using MVC2 model. 
 
 Developed by:
 
- - Hwanik Yoo (as front/back-end dev)
- - Jinsun Kim (as front/back-end dev)
- - Myeonggi Shim (as front/back-end dev)
+ - Hwanik Yoo (as full stack dev)
+ - Jinsun Kim (as full stack dev)
+ - Myeonggi Shim (as full stack dev)
 
-This project aims to provide: 
+This project aimed to provide: 
 
  - A community for those who wishes to share information about Korea's COVID-19 situation
  - Number of cases of death, tested positive 
@@ -16,7 +17,7 @@ This project aims to provide:
  
 Technologies used to develop this project comprises:
 
-  - HTML(thymeleaf),CSS,Jquery
+  - HTML(with thymeleaf syntax),CSS,Jquery
   - JAVA
   - MariaDB
   - Apache Tomcat (WAS)
@@ -24,7 +25,7 @@ Technologies used to develop this project comprises:
   - Spring Boot
 
 APIs from:
-공공데이터포털: https://www.data.go.kr 
+public open data portal: https://www.data.go.kr 
 (COVID-19 info API, COVID-19 Medical Center API)
 
 
